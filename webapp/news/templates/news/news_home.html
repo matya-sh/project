@@ -11,8 +11,9 @@
     {% for el in news %}
       <div class="alert alert-warning">
         <a href="{% url 'news-detail' el.id %}"> <h3>{{ el.title }}</h3></a>
-        <p>{{ el.anons}}</p>
+        <p>
         <img src="{{ el.img.url }}">
+            {{ el.anons}} </p>
       </div>
 
     {% endfor %}

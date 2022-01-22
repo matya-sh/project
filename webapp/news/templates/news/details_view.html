@@ -9,6 +9,7 @@
     <p> {{ article.date}}  </p>
     <p>{{ article.full_text}}</p>
     <a href="{% url 'news-update' article.id %}" type="button" class="btn btn-success">Обновить</a>
-    <a href="{% url 'news-delete' article.id %}"><img src="{% static 'main/img/trash.svg' %}"></a>
+    <a href="{% url 'news-delete' article.id %}" type="button" class="btn btn-danger" ><img src="{% static 'main/img/trash.svg' %}">Удалить</a>
+
 </div>
 {% endblock %}
