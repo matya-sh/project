@@ -7,8 +7,11 @@
 
 <div class="features">
     <h1>Новости</h1>
+    <div style="overflow-y: auto;  overflow-x: auto; height: 800px;">
     {% if news %}
     {% for el in news %}
+
+
       <div class="alert alert-warning">
         <a href="{% url 'news-detail' el.id %}"> <h3>{{ el.title }}</h3></a>
         <p>
@@ -16,10 +19,12 @@
             {{ el.anons}} </p>
       </div>
 
+
     {% endfor %}
     {% else %}
     <p>Нет записей!</p>
     {% endif %}
+        </div>
 </div>
 
 

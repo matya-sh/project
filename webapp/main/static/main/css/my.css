@@ -50,7 +50,7 @@ aside ul li:hover, aside ul a:hover {
 main .features {
     float: left;
     color: #fff;
-    margin-top: 100px;
+
     text-align: center;
     width: 75%;
 }
@@ -61,12 +61,13 @@ main .features p {max-wigth: 400px; margin: 20px auto}
 .alert-warning {
   float:left;
   clear: both;
-  width: 800px;
+  width: 900px;
   margin: 20px 10%;
   text-align: left;
 }
 .alert-warning img {
    float: left;
+   height: 100px;
    padding: 0 20px 20px 0;
 }
 
