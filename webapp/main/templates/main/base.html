@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css' %}" type="text/css" >
+    <link rel="stylesheet" href="{% static 'main/css/my.css' %}" type="text/css" >
+</head>
+<body>
+
+    <aside>
+        <span class="logo">Крепеж!</span>
+        <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home' %}">  <li> <i><img src="{% static 'main/img/house-door.svg' %}"></i>Главная</li></a>
+            <a href="{% url 'about' %}"> <li><i><img src="{% static 'main/img/card-list.svg' %}"></i>Про нас</li></a>
+            <a href="{% url 'news_home' %}"> <li><i><img src="{% static 'main/img/person-rolodex.svg' %}"></i>Новости</li></a>
+            <a href="{% url 'create' %}"> <li><button class="btn btn-info"><i class="fas fa-plus-circle"></i>Добавить</li></a>
+        </ul>
+    </aside>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
